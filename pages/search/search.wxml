@@ -1,0 +1,44 @@
+<!--pages/search/search.wxml-->
+<view class='search-box'>
+  <view>
+  <input 
+      class='search'
+      placeholder='请输入商品名称和货号' 
+      adjust-position="true" 
+      focus="true"
+      type="text"
+      confirm-type="search"
+      bindinput="watchInput"
+      bindconfirm="insertHistory"
+      value="{{searchinput}}">
+     <image src="../../asset/icon-search.png" class='search-bg' mode="aspectFit"></image>
+     <icon class="clearInput" type="clear" size="14" bindtap='clearInput'/>
+  </input>
+  </view>
+  <view>
+     <text class='hot-title'>热门搜索</text>
+     <view class='hot'>
+         <block wx:for="{{hotData}}" wx:key="{{index}}">
+         <view class='cc'>
+            <text>{{item}}</text>
+         </view>
+         </block>
+     </view>
+  </view>
+   <view>
+      <view class='history'>
+        <text class='hot-title'>历史搜索</text>
+        <image src='../../asset/icon-delete.png' mode='aspectFit' bindtap='clearHistory'></image>
+      </view>
+      <view class='hot'>
+         <block wx:for="{{searchData}}" wx:key="{{index}}">
+         <view class='cc'>
+            <text>{{item}}</text>
+         </view>
+         </block>
+      </view>
+    </view>
+</view>
+<modalss show="{{showModal}}" height='20%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+  <view class='modal-content'> <text>清空历史记录吗</text></view>
+</modalss>

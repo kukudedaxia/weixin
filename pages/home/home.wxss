@@ -1,0 +1,17 @@
+/* pages/demo/demo.wxss */
+
+.slide-image {
+  width: 100%
+}
+.main {
+  width: 70rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.imgKind {
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  padding:10rpx 20rpx;
+  border-bottom: 1px #f6f6f6 solid;
+}

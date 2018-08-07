@@ -1,0 +1,48 @@
+.img-box {
+  width: 25%;
+  text-align: center;
+}
+
+.img-box .image {
+  width: 100%;
+  height: 100rpx;
+}
+
+.image-text {
+  font-size: 24rpx;
+}
+
+/* // 个人中心 */
+.list-item {
+  margin-bottom: 20rpx;
+}
+.personList {
+  height: 100rpx;
+  background: #fff;
+  padding:0 0 0 40rpx;
+  border-bottom: 1rpx solid #ededed;
+}
+
+.personList-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.personLeft {
+  float: left;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.personRight {
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+}
+.personCount {
+ font-weight:100;
+}

@@ -1,0 +1,17 @@
+<!--pages/personal/personal.wxml-->
+<import src="../../template/personalList.wxml" />
+<view>
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <!-- <open-data type="userAvatarUrl"></open-data> -->
+      <image src="{{userInfo.avatarUrl}}" mode='aspectFit'></image>
+    </view>
+    <!-- <open-data type="userNickName"></open-data> -->
+     <text>{{userInfo.nickName}}</text>
+     <image src='../../asset/icon-man.png' wx:if="{{sex == 1}}"></image>
+     <image src='../../asset/icon-woman.png' wx:else></image>
+  </view>
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <template is="personList" data="{{array:item}}" />
+  </block>
+</view>

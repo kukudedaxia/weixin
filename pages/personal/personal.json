@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search": "../../compoent/search/search",
+    "imgKind": "../../compoent/kind/kind"
+  }
+}

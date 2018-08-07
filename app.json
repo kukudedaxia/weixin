@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/home/home",
+    "pages/main/main",
+    "pages/index/index",
+    "pages/personal/personal"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "风中",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "asset/icon-home.jpg",
+        "selectedIconPath": "asset/icon-home-active.jpg"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "asset/icon-person.jpg",
+        "selectedIconPath": "asset/icon-person-active.jpg"
+      }
+    ],
+    "selectedColor": "#000",
+    "color": "8d8d8d",
+    "borderStyle":"black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

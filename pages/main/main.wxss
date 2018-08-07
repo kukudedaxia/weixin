@@ -1,0 +1,8 @@
+/* pages/main/main.wxss */
+.search {
+  position:fixed;
+  width:100%;
+  top:20rpx;
+  z-index:999;
+  height: 90rpx;
+}

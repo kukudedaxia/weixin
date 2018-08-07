@@ -1,0 +1,5 @@
+<!--pages/main/main.wxml-->
+<view>
+<search class="search"></search>
+<nav height="{{height}}"></nav>
+</view>

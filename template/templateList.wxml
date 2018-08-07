@@ -1,0 +1,12 @@
+<!--
+  index: int
+  msg: string
+  time: string
+-->
+
+<template name="msgItem">
+  <view class='img-box'>
+     <image src="{{imgurl}}" mode='aspectFit' class='image'></image>
+     <text class='image-text'>{{text}}</text>
+  </view>
+</template>
