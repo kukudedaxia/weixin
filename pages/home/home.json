@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "search": "../../compoent/search/search",
+    "imgKind": "../../compoent/kind/kind"
+  },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "风中小屋",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+}

@@ -1,0 +1,19 @@
+<search inner-text="Some text">
+  <image src='../../asset/icon-kind.jpg' class='main' bindtap='goNav'></image>
+</search>
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{pointColor}}" indicator-active-color="{{activeColor}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<import src="../../template/templateList.wxml"/>
+<view class="imgKind">
+ <block wx:for="{{array}}" wx:key="{{index}}">
+    <template is="msgItem" data="{{...item}}"/>
+</block>
+</view>
+<!-- <button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button> -->

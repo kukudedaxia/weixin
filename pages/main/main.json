@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "search": "../../compoent/search/search",
+    "nav": "../../compoent/kind/kind"
+  },
+  "disableScroll": true,
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "分类",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

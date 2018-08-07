@@ -1,0 +1,7 @@
+<!-- 这是自定义组件的内部WXML结构 -->
+<view class="inner">
+  <slot class="main"></slot>
+  <input class='search' placeholder='搜索商品' adjust-position="true" placeholder-class="place-holder" disabled="{{disabled}}" bindtap="goSearch">
+      <image src="../../asset/icon-search.png" class='search-bg' mode="{{mode}}"></image>
+   </input>
+</view>
