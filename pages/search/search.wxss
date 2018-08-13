@@ -114,9 +114,10 @@ page {
 }
 
 .search-content {
-  padding: 80rpx 20rpx;
+  margin: 80rpx 0;
+  padding: 0 20rpx;
   height:100%;
-background:#fff;
+   background:#fff;
 }
 
 .shop-content {

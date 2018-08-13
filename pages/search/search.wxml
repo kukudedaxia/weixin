@@ -34,7 +34,7 @@
   <view hidden="{{step !== 3}}"><template is="nav" data="{{navbar:navbar,currentTab:currentTab}}" /></view>
   <view hidden="{{step !== 3}}" class='item-content'>
     <import src="../../template/item.wxml"/>
-        <scroll-view class="shop-content">
+        <scroll-view class="shop-content" scroll-top="{{scrollTop}}">
         <template is="row-2" data="{{array:array}}"/>
         </scroll-view>
   </view>

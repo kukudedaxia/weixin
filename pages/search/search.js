@@ -9,11 +9,27 @@ Page({
     searchData: [], // 存储搜索历史记录信息
     showModal: false, //弹窗状态
     focus: true,
-    viewBg:'#fff',
-    step: 3, //显示内容状态 1位搜索框 2为内容 3位下拉界面，
+    step: 1, //显示内容状态 1位搜索框 2为内容 3位下拉界面，
     navbar: ['首页', '价格', '新品', '尺码'],
     currentTab: 0,
+    scrollTop:0, 
     array: [
+      {
+        imgurl: '../../asset/item.jpg',
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+      },
+      {
+        imgurl: '../../asset/item.jpg',
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+      },
+      {
+        imgurl: '../../asset/item.jpg',
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+      },
+      {
+        imgurl: '../../asset/item.jpg',
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+      },
       {
         imgurl: '../../asset/item.jpg',
         text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
@@ -33,7 +49,7 @@ Page({
     this.setData({
       searchText:'',
       step: 1,
-      viewBg: '#fff'
+      scrollTop:0
     })
   },
   // 切换tab
@@ -55,16 +71,18 @@ Page({
       this.setData({
         searchText: title,
         step:1,
-        viewBg: '#fff'
+        scrollTop:0
       })
     }
   },
   // 搜索方法
   search() {
     let keyword = this.data.searchText;
+    let data = this.data.searchData;
+    data.push(keyword);
     this.setData({
       searchText: keyword,
-      viewBg: '#f4f4f7',
+      searchData:data,
       step:3
     })
   },
