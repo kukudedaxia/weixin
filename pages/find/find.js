@@ -1,26 +1,27 @@
-// pages/main/main.js
+// pages/find/find.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    isScroll:false,
-    height:''
+    searchText: 'AJ1',
+  },
+  watch(e) {
+    // console.log(e.detail.title)
+    this.setData({
+      searchText: e.detail.title
+    })
+  },
+  // 搜索方法
+  search() {
+    console.log(this.data.searchText)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取页面信息
-    wx.getSystemInfo({
-      success: res => {
-        // console.log(res)
-        this.setData({
-          height: res.windowHeight - 53
-        })
-      }
-    })
-    // console.log(this.data.height)
+  
   },
 
   /**
@@ -29,7 +30,6 @@ Page({
   onReady: function () {
   
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
@@ -43,14 +43,6 @@ Page({
   onHide: function () {
   
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

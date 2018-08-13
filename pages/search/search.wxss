@@ -1,8 +1,22 @@
 /* pages/search/search.wxss */
 
+page {
+  /* background: #f4f4f7; *//* background: #fff; */
+  height: 100%;
+  background: #f4f4f7;
+}
+
 .search-box {
-  padding: 0 20rpx;
-  /* display: flex; */
+  /* padding: 0 20rpx; *//* display: flex; */
+}
+
+.search-fixed {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  padding-bottom: 10rpx;
 }
 
 .search {
@@ -52,12 +66,14 @@
   margin: 10rpx 10rpx;
   border-radius: 2rpx;
 }
+
 .history {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction:row;
+  flex-direction: row;
 }
+
 .history image {
   width: 40rpx;
   height: 40rpx;
@@ -71,4 +87,39 @@
   top: 2rpx;
   /* height: 60rpx; */
   width: 40rpx;
+}
+
+.modal-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 32rpx;
+}
+
+.item-content {
+  /* height: 100%; */
+  background: #f4f4f7;
+  /* position: fixed; */
+  /* top: 110rpx; */
+  width: 100%;
+  padding-top:180rpx;
+}
+
+.navbar {
+  top: 88rpx;
+  position: fixed;
+  z-index: 99;
+}
+
+.search-content {
+  margin: 80rpx 0;
+  padding: 0 20rpx;
+  height:100%;
+   background:#fff;
+}
+
+.shop-content {
+  /* margin-top: 192rpx;  */
 }

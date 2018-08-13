@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "confirmBox": "../../compoent/modal/modal",
     "search": "../../compoent/searchs/searchs"
   },
   "navigationBarBackgroundColor": "#ffffff",
