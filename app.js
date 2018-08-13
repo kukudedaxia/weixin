@@ -1,4 +1,4 @@
-import { Modal } from './component/modal/modal'
+
 //app.js
 App({
   onLaunch: function () {

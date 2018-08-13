@@ -1,63 +1,90 @@
 // pages/search/search.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     hotData:['AJ1','The Ten','Surpreme','OFF-WHITE','欧文','喷','Air Max','哈登','科比','詹姆斯'],
-    searchData: ['AJ1', 'NIKE'], // 存储搜索历史记录信息
-    showModal: true
+    searchText:'',
+    searchData: [], // 存储搜索历史记录信息
+    showModal: false, //弹窗状态
+    focus: true,
+    viewBg:'#fff',
+    step: 3, //显示内容状态 1位搜索框 2为内容 3位下拉界面，
+    navbar: ['首页', '价格', '新品', '尺码'],
+    currentTab: 0,
+    array: [
+      {
+        imgurl: '../../asset/item.jpg',
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+      },
+      // {
+      //   imgurl: '../../asset/item.jpg',
+      //   text: 'Air jordan 哈市开发商开发的'
+      // },
+      {
+        imgurl: '../../asset/item.jpg',
+        text: 'Air jordan'
+      }
+    ]
+  },
+  // 删除搜索框内容 显示搜索1界面
+  clearInput() {
+    this.setData({
+      searchText:'',
+      step: 1,
+      viewBg: '#fff'
+    })
+  },
+  // 切换tab
+  navbarTap(e) {
+    let index = e.currentTarget.dataset.idx;
+    this.setData({
+      currentTab: index
+    })
   },
   // 监听input框的输入内容
-  watchInput: function(e) {
-    console.log(e.detail.value)
+  watch(e) {
+    let title = e.detail.title;
+    // 三种情况 1。是没值显示搜索页面 2。是没开始所搜,显示下拉界面 3。是搜索显示内容界面
+    if(title !== '') {
+      this.setData({
+        searchText: title
+      })
+    } else {
+      this.setData({
+        searchText: title,
+        step:1,
+        viewBg: '#fff'
+      })
+    }
   },
-  //清除输入内容
-  clearInput: function(e) {
+  // 搜索方法
+  search() {
+    let keyword = this.data.searchText;
     this.setData({
-      searchinput:''
+      searchText: keyword,
+      viewBg: '#f4f4f7',
+      step:3
     })
   },
   // 清除历史记录
   clearHistory: function(e) {
-    wx.clearStorageSync('searchData');
     this.setData({
-      searchData: ''
+      showModal: true
     })
   },
- // 弹窗自定义事件
+  // 弹窗自定义事件
+  modalConfirm: function(e) {
+    wx.clearStorageSync('searchData');
+    this.setData({
+      searchData: '',
+      showModal:false
+    })
+  },
   modalCancel: function (e) {
     this.setData({
       showModal: false
-    })
-  },
-  modalConfirm: function (e) {
-    this.setData({
-      showModal: false
-    })
-  },
-  // 点击软键盘搜索把搜索内容存在历史本地
-  insertHistory: function (e) {
-    var searchTitle = e.detail.value;
-    var save = true;
-    for(var i=0;i<this.data.searchData.length;i++) {
-      if (searchTitle == this.data.searchData[i]) {
-        save = false;
-        break;
-      }
-    }
-    // 满足条件不为空且和之前历史不相同
-    if ("" != searchTitle && save) {
-      var searchLogData = this.data.searchData;
-      searchLogData.push(searchTitle);
-      wx.setStorageSync('searchData', searchLogData);
-      this.setData({
-        searchData: wx.getStorageSync('searchData')
-      });
-    }
-    wx.switchTab({
-      url: '/pages/home/home'
     })
   },
   /**

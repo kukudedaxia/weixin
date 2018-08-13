@@ -1,0 +1,18 @@
+<!--compoent/searchs/searchs.wxml-->
+<view class='search-box'>
+  <view>
+  <input 
+      class='search'
+      placeholder="{{placeholder}}" 
+      adjust-position="true" 
+      focus="{{focus}}"
+      type="text"
+      confirm-type="search"
+      bindinput="watchInput"
+      bindconfirm="search"
+      value="{{value}}">
+     <image src="../../asset/icon-search.png" class='search-bg' mode="aspectFit"></image>
+     <icon class="clearInput" type="clear" size="14" bindtap='clearInput'/>
+  </input>
+  </view>
+  </view>

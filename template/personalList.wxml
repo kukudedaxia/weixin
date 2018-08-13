@@ -3,7 +3,6 @@
   msg: string
   time: string
 -->
-
 <template name="personList">
 <view class='list-item'>
 <block wx:for="{{array}}" wx:key="{{index}}">

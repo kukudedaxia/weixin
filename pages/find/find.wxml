@@ -1,0 +1,4 @@
+<!--pages/find/find.wxml-->
+<view>
+  <search value="{{searchText}}" placeholder="haha" bindsearch='search' bindwatch="watch"></search>
+</view>
