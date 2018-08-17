@@ -21,7 +21,7 @@
 .personList {
   height: 100rpx;
   background: #fff;
-  padding: 0 0 0 40rpx;
+  padding:0 0 0 40rpx;
   border-bottom: 1rpx solid #ededed;
 }
 
@@ -147,3 +147,7 @@
   height: 4rpx;
   background: #FFCC00;
 } */
+
+.personCount {
+ font-weight:100;
+}

@@ -80,8 +80,9 @@ Page({
       searchText: keyword,
       searchData:data,
       step:3,
-      scrollTop:0
+      scrollTop:0 
     })
+      // 存储搜索历史记录信息
   },
   // 清除历史记录
   clearHistory: function(e) {
@@ -97,6 +98,7 @@ Page({
       showModal:false
     })
   },
+ // 弹窗自定义事件
   modalCancel: function (e) {
     this.setData({
       showModal: false
