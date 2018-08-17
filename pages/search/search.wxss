@@ -11,7 +11,7 @@ page {
 }
 
 .search-fixed {
-  position: fixed;
+  position: absolute;
   z-index: 99;
   width: 100%;
   top: 0;
@@ -92,7 +92,7 @@ page {
 .modal-content {
   height: 100%;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   color: #666;
   font-size: 32rpx;
@@ -109,17 +109,17 @@ page {
 
 .navbar {
   top: 88rpx;
-  position: fixed;
+  position: absolute;
   z-index: 99;
 }
-
+.search-warp {
+  height: 100%;
+  overflow: hidden;
+}
 .search-content {
-  margin: 80rpx 0;
-  padding: 0 20rpx;
+  padding: 80rpx 20rpx 0;
   height:100%;
-   background:#fff;
+  background:#fff;
+  box-sizing:border-box;
 }
 
-.shop-content {
-  /* margin-top: 192rpx;  */
-}

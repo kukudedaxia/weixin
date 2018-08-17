@@ -34,11 +34,16 @@ Component({
     // 搜索
     search(e) {
       // 存入本地搜索历史记录
-      if ("" != wx.getStorageSync('searchData')) {
+      if ("" !== wx.getStorageSync('searchData')) {
         this.setData({
           searchData: wx.getStorageSync('searchData')
         });
+      } else {
+        this.setData({
+          searchData: []
+        });
       }
+      // 判断是否输入和历史重复
       let searchTitle = e.detail.value;
       let save = true;
       for (let i = 0; i < this.data.searchData.length; i++) {
@@ -48,15 +53,14 @@ Component({
         }
       }
       // 满足条件不为空且和之前历史不相同
-      if ("" != searchTitle && save) {
+      if ("" !== searchTitle && save) {
+        console.log('manzu')
         let searchLogData = this.data.searchData;
         searchLogData.push(searchTitle);
         wx.setStorageSync('searchData', searchLogData);
       }
-      console.log(this.data.value)
-      // if(this.data.title !== '' && this.data.title !== this.data.value) {
-         this.triggerEvent('search')
-      // }
+      if ("" !== searchTitle)
+        {this.triggerEvent('search')}
     },
     // 清除数据
     clearInput() {

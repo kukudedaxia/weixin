@@ -8,16 +8,12 @@ Page({
     searchText:'',
     searchData: [], // 存储搜索历史记录信息
     showModal: false, //弹窗状态
-    focus: true,
+    focus: false,
     step: 1, //显示内容状态 1位搜索框 2为内容 3位下拉界面，
     navbar: ['首页', '价格', '新品', '尺码'],
     currentTab: 0,
-    scrollTop:0, 
+    scrollTop:1000, 
     array: [
-      {
-        imgurl: '../../asset/item.jpg',
-        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
-      },
       {
         imgurl: '../../asset/item.jpg',
         text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
@@ -48,8 +44,8 @@ Page({
   clearInput() {
     this.setData({
       searchText:'',
-      step: 1,
-      scrollTop:0
+      scrollTop:0,
+      step: 1
     })
   },
   // 切换tab
@@ -65,7 +61,7 @@ Page({
     // 三种情况 1。是没值显示搜索页面 2。是没开始所搜,显示下拉界面 3。是搜索显示内容界面
     if(title !== '') {
       this.setData({
-        searchText: title
+        searchText: title,
       })
     } else {
       this.setData({
@@ -78,12 +74,13 @@ Page({
   // 搜索方法
   search() {
     let keyword = this.data.searchText;
-    let data = this.data.searchData;
-    data.push(keyword);
+    let data = wx.getStorageSync('searchData');
+    // console.log(data)
     this.setData({
       searchText: keyword,
       searchData:data,
-      step:3
+      step:3,
+      scrollTop:0
     })
   },
   // 清除历史记录
@@ -113,8 +110,15 @@ Page({
       this.setData({
         searchData: wx.getStorageSync('searchData')
       });
-    } else {
     }
+    wx.getSystemInfo({
+      success: res => {
+        // console.log(res)
+        this.setData({
+          height: res.windowHeight - 90
+        })
+      }
+    })
   },
 
   /**

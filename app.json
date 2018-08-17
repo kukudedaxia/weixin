@@ -2,10 +2,10 @@
   "pages": [
     "pages/search/search",
     "pages/home/home",
+    "pages/personal/personal",
     "pages/find/find",
     "pages/main/main",
-    "pages/index/index",
-    "pages/personal/personal"
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
