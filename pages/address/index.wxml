@@ -1,0 +1,40 @@
+<!--pages/address/index.wxml-->
+<radio-group>
+<view class='list'>
+  <view class='space'>
+     <text>冷辉</text>
+     <text>18222523577</text>
+  </view>
+  <view class='address'>北京市北京市朝阳区来广营北路东洲家园二楼2单元403</view>
+  <view class='hr'></view>
+  <view class='space edit-group'>
+     <label class="radio"><radio value="默认地址" checked="true"/>默认地址</label>
+     <view>
+       <text class='edit'>编辑</text>
+       <text class='delete' bindtap='deleteItem'>删除</text>
+     </view>
+  </view>
+</view>
+<view class='list'>
+  <view class='space'>
+     <text>冷辉</text>
+     <text>18222523577</text>
+  </view>
+  <view class='address'>北京市北京市朝阳区来广</view>
+  <view class='hr'></view>
+  <view class='space edit-group'>
+     <label class="radio"><radio value="默认地址"/>默认地址</label>
+     <view>
+       <text class='edit'>编辑</text>
+       <text class='delete' bindtap='deleteItem'>删除</text>
+     </view>
+  </view>
+</view>
+</radio-group>
+<view class='shopping'>
+      添加新地址
+</view>
+<!-- 弹窗 -->
+<confirmBox show="{{showModal}}" height='20%' bindcancel="modalCancel" bindconfirm='modalConfirm'>
+    <view class='tips-content' style='fontSize:32rpx'>删除地址?</view>
+</confirmBox>

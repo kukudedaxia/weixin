@@ -1,0 +1,15 @@
+<!--pages/editAddress/index.wxml-->
+<view class='addressBox'>
+ <view class='list'>
+      <text class='attr'>收货人</text>
+      <input placeholder="填写姓名"/>
+ </view>
+  <view class='list'>
+     <text class='attr'>联系电话</text>
+     <input placeholder="填写手机号"/>
+ </view>
+  <textarea class="detailAddress" placeholder="填写详细地址" name="textarea"/>
+</view>
+<view class='save'>
+  保存
+</view>

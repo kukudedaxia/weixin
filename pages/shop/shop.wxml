@@ -1,0 +1,40 @@
+<view class="content">
+  <!-- 商品介绍-->
+  <view class='wrap'>
+    <swiper autoplay="{{autoplay}}" duration="{{duration}}" bindchange="swiperChange" style='height:440rpx'>
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <view class='shop-item-swiper'>
+            <image src="{{item}}" class="slide-image" width="355" height="150" bindtap='preview'/>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class='shop-info'>
+    <text class='shop-name'>Air Jordan 1 Retro High Game Royal AJ1 小闪电</text>
+    <view class='shop-price'>
+      <text style="font-size:28rpx">¥</text>1389</view>
+  </view>
+  <!-- 商品尺码选择 -->
+  <view class='select'  bindtap='showSize'>
+    <view>
+      <text class='select-info'>选择尺码</text> 请选择尺码
+    </view>
+    <image class='select-icon' src='../../asset/icon-next.png' mode='aspectFit'></image>
+  </view>
+  <!-- 立即购买 -->
+  <view class='shopping'>
+      立即购买
+  </view>
+  <view wx:if="{{sizeShow}}" catchtouchmove="preventD">
+     <size itemHeight="{{height}}" content="{{size}}" bindclose="closeSize" bindselect="selectItem"></size>
+  </view>
+  <!-- <image src='../../asset/item.jpg'></image>
+   <image src='../../asset/item.jpg'></image> -->
+</view>

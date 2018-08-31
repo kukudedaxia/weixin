@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "size": "../../compoent/size/size"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "商品详情",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

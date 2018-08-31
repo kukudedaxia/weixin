@@ -9,34 +9,35 @@ Page({
     searchData: [], // 存储搜索历史记录信息
     showModal: false, //弹窗状态
     focus: false,
-    step: 1, //显示内容状态 1位搜索框 2为内容 3位下拉界面，
-    navbar: ['首页', '价格', '新品', '尺码'],
+    step: 3, //显示内容状态 1位搜索框 2为内容 3位下拉界面，
+    navbar: [{title:'首页'},{title:'价格',sort:true},{title:'新品'},{title:'尺码',down:true}],
     currentTab: 0,
     scrollTop:1000, 
     array: [
       {
         imgurl: '../../asset/item.jpg',
-        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间',
+        price: '-'
       },
       {
         imgurl: '../../asset/item.jpg',
-        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间',
+        price: 1000
       },
       {
         imgurl: '../../asset/item.jpg',
-        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间',
+        price: 1003
       },
       {
         imgurl: '../../asset/item.jpg',
-        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间'
+        text: 'Air jordan 中偶爱十分骄傲是开了房所说的地方大师傅间',
+        price:9999
       },
-      // {
-      //   imgurl: '../../asset/item.jpg',
-      //   text: 'Air jordan 哈市开发商开发的'
-      // },
       {
         imgurl: '../../asset/item.jpg',
-        text: 'Air jordan'
+        text: 'Air jordan',
+        price: 2000
       }
     ]
   },
@@ -102,6 +103,11 @@ Page({
   modalCancel: function (e) {
     this.setData({
       showModal: false
+    })
+  },
+  go() {
+     wx.navigateTo({
+      url: '/pages/shop/shop'
     })
   },
   /**

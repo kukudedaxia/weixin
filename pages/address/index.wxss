@@ -1,0 +1,39 @@
+/* pages/address/index.wxss */
+page {
+  height: 100%;
+  background: #f4f4f7;
+}
+.list {
+  background: #fff;
+  font-size: 28rpx;
+  margin-bottom: 20rpx
+}
+.space {
+  display: flex;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  height:80rpx;
+  line-height:80rpx;
+}
+.address {
+  padding:10rpx 20rpx 30rpx 20rpx;
+  text-align: left;
+}
+.hr {
+  height:2rpx;
+  background:#ededed;
+}
+.edit-group {
+  font-size: 24rpx;
+}
+.edit {
+  margin-right: 80rpx;
+  color: #01c2c3;
+}
+.delete {
+  color: #c30809
+}
+
+radio {
+  transform:scale(0.7);
+}

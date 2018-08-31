@@ -1,0 +1,98 @@
+/* pages/shop/shop.wxss */
+
+page {
+  background: #f4f4f7;
+}
+.bodyLock{
+    top:0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 0;
+}
+.content {
+  background: #fff;
+}
+.shop-item-swiper {
+  display: flex;
+  align-items: center; /*垂直居中*/
+  justify-content: center; /*水平居中*/
+  height: 100%;
+}
+
+.shop-item-swiper image {
+  width: 400rpx;
+  height: 400rpx;
+}
+
+/*用来包裹所有的小圆点  */
+
+.dots {
+  height: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  /* position: absolute;
+  left: 320rpx;
+  bottom: 20rpx; */
+}
+
+/*未选中时的小圆点样式 */
+
+.dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin-right: 26rpx;
+  background-color: #e6e6e6;
+}
+
+/*选中以后的小圆点样式  */
+
+.active {
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #434448;
+}
+
+.shop-info {
+  padding: 0 10%;
+  justify-content: center;
+  text-align: center;
+}
+.shop-name {
+  display: block;
+  margin: 10rpx 0;
+  font-weight: 100;
+  font-size: 44rpx;
+}
+
+.shop-price {
+  font-size: 44rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.select {
+  padding-left: 20rpx;
+  height: 100rpx;
+  border-top: 1rpx solid #ededed;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select-info {
+  color: #848493;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+.select-icon {
+  width: 60rpx;
+  height: 60rpx;
+}

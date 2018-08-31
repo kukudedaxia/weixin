@@ -1,48 +1,60 @@
 /* compoent/modal/modal.wxss */
-.mask{
- position: absolute;
- left: 0;
- right: 0;
- top: 0;
- bottom: 0;
- display: flex;
- justify-content: center;
- align-items: center;
- background-color: rgba(0,0,0,0.4);
- z-index: 9999;
+
+.mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  animation: cloud 0.3s linear;
 }
- 
-.modal-content{
- display: flex;
- flex-direction: column;
- width: 80%;
- /* height: 80%; */
- background-color: #fff;
- border-radius: 10rpx;
+@keyframes cloud {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
- 
-.modal-btn-wrapper{
- display: flex;
- flex-direction: row;
- height: 100rpx;
- line-height: 100rpx;
- border-top: 2rpx solid rgba(7,17,27,0.1);
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* height: 80%; */
+  background-color: #fff;
+  border-radius: 10rpx;
 }
- 
-.cancel-btn, .confirm-btn{
- flex: 1;
- height: 100rpx;
- line-height: 100rpx;
- text-align: center;
- font-size: 32rpx;
+
+.modal-btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 2rpx solid rgba(7, 17, 27, 0.1);
 }
- 
-.cancel-btn{
- border-right: 2rpx solid rgba(7,17,27,0.1);
+
+.cancel-btn, .confirm-btn {
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
 }
- 
-.main-content{
- flex: 1;
- height: 100%;
- overflow-y: hidden; 
+
+.cancel-btn {
+  border-right: 2rpx solid rgba(7, 17, 27, 0.1);
+}
+.main-content {
+  flex: 1;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
 }

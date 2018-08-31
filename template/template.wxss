@@ -131,12 +131,22 @@
   line-height: 90rpx;
   font-size: 30rpx;
   color: #a7a6af;
+  display:flex;
+justify-content:center;
+align-items:center;
 }
 
 .navbar .item.active {
   color: #39a6b8;
 }
-
+.navbar .sort-wrap {
+  margin-left: 10rpx;
+}
+.navbar .item image {
+  width: 14rpx;
+  height: 14rpx;
+  display: block
+}
 /* .navbar .item.active:after{
   content: "";
   display: block;

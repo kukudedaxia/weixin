@@ -1,7 +1,5 @@
 <!--
-  index: int
-  msg: string
-  time: string
+  个人信息
 -->
 <template name="personList">
 <view class='list-item'>

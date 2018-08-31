@@ -1,0 +1,29 @@
+/* pages/editAddress/index.wxss */
+.list {
+  display:flex;
+  justify-content:flex-start;
+  height:100rpx;
+  font-size:34rpx;
+align-items:center;
+border-bottom: 1px solid #ededed;
+}
+.attr {
+  width: 200rpx;
+  margin-left: 20rpx;
+}
+.detailAddress {
+  width:100%;
+padding:0 20rpx;
+box-sizing:border-box;
+font-size: 34rpx;
+}
+.save {
+ font-size: 38rpx;
+  color: #fff;
+  background: #01c2c3;
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}

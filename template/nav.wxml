@@ -1,5 +1,15 @@
+<!-- 选项卡 -->
 <template name="nav">
 <view class="navbar">
-  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  <view wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">
+    <view>{{item.title}}</view>
+    <view class='sort-wrap' wx-if="{{item.sort}}">
+       <image src='../../asset/icon-top.png'></image>
+       <image src='../../asset/icon-down.png'></image>
+    </view>
+    <view class='sort-wrap' wx-if="{{item.down}}">
+    <image src='../../asset/icon-down.png'></image>
+    </view>
+  </view>
 </view>
 </template>

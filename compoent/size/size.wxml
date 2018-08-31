@@ -1,0 +1,23 @@
+<view class='mask' bindtap='clickMask'>
+  <view class='warp {{aniStyle ? "slideup":"slidedown"}}'>
+  <view class='head'>
+      <image src='../../asset/item.jpg'></image>
+      <view>
+          <view class='head-price'><text style='font-size:28rpx'>¥</text>
+          {{price}}
+          </view>
+          <view class='head-size'>{{size}}</view>
+      </view>
+  </view>
+  <scroll-view scroll-y="true" catchtap='int' style='height:{{height}}px;margin-top:180rpx'>
+  <view class='content'>
+    <block wx:for="{{content}}" wx:key="{{index}}">
+      <view class="item {{current==index ? 'active' : ''}}" style='height:{{itemHeight}}px;margin-top:{{margin}}px' catchtap="change" data-index='{{index}}' data-price='{{item.price}}' data-size="{{item.size}}">
+        <view class='size'>{{item.size}}</view>
+        <view class='price'>¥{{item.price}}</view>
+      </view>
+    </block>
+    </view>
+  </scroll-view>
+  </view>
+</view>

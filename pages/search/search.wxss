@@ -88,11 +88,8 @@ page {
   /* height: 60rpx; */
   width: 40rpx;
 }
-.modal-content {
-  height: 100%;
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
+.tips-content {
+  text-align: center;
   color: #666;
   font-size: 32rpx;
 }

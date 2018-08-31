@@ -1,17 +1,15 @@
 <!--
-  index: int
-  msg: string
-  time: string
+  商品item
 -->
 <template name="row-2">
 <view class='shop-box'>
 <block wx:for="{{array}}" wx:key="{{index}}">
-  <view class="shop-item {{index % 2 == 0 ?'border-right':'border-left'}}">
+  <view class="shop-item {{index % 2 == 0 ?'border-right':'border-left'}}" bindtap='go'>
      <image src="{{item.imgurl}}" mode='aspectFit' class='shop-item-img'></image>
      <text class="shop-item-name">{{item.text}}</text>
      <view class='shop-item-price'>
           <text class='left-text'>
-             <text style="font-size:23rpx">¥</text>1389
+             <text style="font-size:23rpx">¥</text>{{item.price}}
           </text>
           <text class='right-text' style="font-size:22rpx">1900人付款</text>
       </view>
